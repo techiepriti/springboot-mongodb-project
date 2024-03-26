@@ -10,4 +10,6 @@ FROM openjdk:17
 
 COPY --from=build /usr/src/app/target/springboot-mongodb-0.0.1-SNAPSHOT.jar /usr/app/springboot-mongodb-0.0.1-SNAPSHOT.jar
 
-CMD["java", "-jar","/usr/app/springboot-mongodb-0.0.1-SNAPSHOT.jar"]
+EXPOSE 5000
+
+CMD ["java", "-jar", "/usr/app/springboot-mongodb-0.0.1-SNAPSHOT.jar"]
